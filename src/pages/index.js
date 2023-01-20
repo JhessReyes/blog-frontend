@@ -3,13 +3,13 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Button from "@/components/atom/Button";
-import Home from "./home/home";
+import Layout from "@/components/templates/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Index() {
+export default function Home() {
   return (
     <>
-      <Button className="btn">Button </Button>
+      <Layout></Layout>
     </>
   );
 }
