@@ -5,10 +5,8 @@ function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <div className="h-screen flex flex-column justify-start">
-        <div className=" w-screen flex flex-column justify-start">
-          {children}
-        </div>
+      <div className="flex flex-column justify-start">
+        <div className="flex flex-column justify-start">{children}</div>
       </div>
     </>
   );
