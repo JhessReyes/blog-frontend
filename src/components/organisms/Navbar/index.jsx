@@ -12,7 +12,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="mx-auto flex h-24 navbar">
+      <div className="mx-auto h-24 navbar">
         <div className="flex-1 h-24">
           <a className="btn btn-ghost normal-case text-xl">LOGO</a>
         </div>
@@ -22,9 +22,7 @@ function Navbar() {
               return (
                 <>
                   <li>
-                    <Link href={menu.link}>
-                      <ButtonNavbar>{menu.label}</ButtonNavbar>
-                    </Link>
+                    <Link href={menu.link}>{menu.label}</Link>
                   </li>
                 </>
               );
