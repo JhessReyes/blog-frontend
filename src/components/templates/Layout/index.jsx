@@ -10,8 +10,8 @@ function Layout({ children }) {
             <Navbar />
           </div>
         </div>
-        <div className="flex justify-center items-start">
-          <div className="xl:max-w-[1280px] w-full">{children}</div>
+        <div className="sm:px-16 px-6 flex justify-center items-start">
+          <div className="xl:max-w-[1280px] w-full text-white">{children}</div>
         </div>
       </div>
     </>

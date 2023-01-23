@@ -1,3 +1,4 @@
+import PrimaryButton from "@/components/atom/buttons/PrimaryButton";
 import { Close } from "@/components/atom/icons/Close";
 import { Menu } from "@/components/atom/icons/Menu";
 import Link from "next/link";
