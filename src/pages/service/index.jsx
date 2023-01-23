@@ -1,12 +1,9 @@
-import PostCard from "@/components/molecules/Card";
 import Layout from "@/components/templates/Layout";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   ApolloClient,
   InMemoryCache,
   HttpLink,
-  gql,
-  useQuery,
   ApolloProvider,
 } from "@apollo/client";
 import Posts from "@/components/organisms/Posts";
