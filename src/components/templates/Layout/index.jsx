@@ -4,10 +4,14 @@ import Navbar from "@/components/organisms/Navbar";
 function Layout({ children }) {
   return (
     <>
-      <Navbar />
-      <div className="h-screen flex flex-column justify-start">
-        <div className=" w-screen flex flex-column justify-start">
-          {children}
+      <div className="bg-primary w-full h-screen overflow-hidden">
+        <div className="sm:px-16 px-6 flex justify-center items-center">
+          <div className="xl:max-w-[1280px] w-full">
+            <Navbar />
+          </div>
+        </div>
+        <div className="sm:px-16 px-6 flex justify-center items-start">
+          <div className="xl:max-w-[1280px] w-full text-white">{children}</div>
         </div>
       </div>
     </>
