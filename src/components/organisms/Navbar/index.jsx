@@ -47,6 +47,28 @@ function Navbar() {
                 <Menu className="text-white w-[28px] h-[28px]" />
               )}
             </div>
+            <div
+              className={`${
+                toggle ? "flex" : "hidden"
+              } p-6 bg-gradient-to-r from-secondary absolute
+               top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl`}
+            >
+              <ul className="list-none justify-end items-center">
+                {menuItems.map(({ ...menu }) => {
+                  return (
+                    <>
+                      <li
+                        key={menu.id}
+                        className="font-poppins font-normal 
+                    cursor-pointer text-[16px] text-white mb-4"
+                      >
+                        <Link href={menu.link}>{menu.label}</Link>
+                      </li>
+                    </>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
