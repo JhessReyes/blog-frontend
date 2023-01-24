@@ -1,33 +1,38 @@
 import PostCard from "@/components/molecules/PostCard";
-import React from "react";
+import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
-
-const ALL_POSTS = gql`
-  query {
-    posts {
-      rows {
-        id
-        title
-        body
-        author {
-          name
-          id
-        }
-        categories {
-          id
-          name
-        }
-        reactions
-      }
-    }
-  }
-`;
+import LimitInput from "@/components/atom/inputs/LimitInput";
 
 const Posts = ({ posts }) => {
+  const [limit, setLimit] = useState("5");
+
+  let ALL_POSTS = gql`
+    query {
+      posts (options: {limit : ${limit} }) {
+        rows {
+          id
+          title
+          body
+          author {
+            name
+            id
+          }
+          categories {
+            id
+            name
+          }
+          reactions
+        }
+      }
+    }
+  `;
   const { data, error, loading } = useQuery(ALL_POSTS);
   return (
     <>
       <div className="">
+        <div className="flex justify-center">
+          <LimitInput onChange={(event) => setLimit(event.target.value)} />
+        </div>
         <div className="bg-primary flex flex-wrap">
           {loading ? (
             <>
