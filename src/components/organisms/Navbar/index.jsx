@@ -1,17 +1,11 @@
 import PrimaryButton from "@/components/atom/buttons/PrimaryButton";
 import { Close } from "@/components/atom/icons/Close";
 import { Menu } from "@/components/atom/icons/Menu";
+import { menuItems } from "@/data/constants";
 import Link from "next/link";
 import React, { useState } from "react";
 
 function Navbar() {
-  const menuItems = [
-    { id: 1, label: "HOME", link: "/" },
-    { id: 2, label: "ABOUT", link: "/about" },
-    { id: 3, label: "SERVICE", link: "/service" },
-    { id: 4, label: "CONTACT", link: "/contact" },
-  ];
-
   const [toggle, setToggle] = useState(false);
 
   return (
