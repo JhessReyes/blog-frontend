@@ -1,4 +1,4 @@
-import PostCard from "@/components/molecules/Card";
+import PostCard from "@/components/molecules/PostCard";
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
 
