@@ -1,26 +1,17 @@
 import Layout from "@/components/templates/Layout";
 import React from "react";
-import {
-  ApolloClient,
-  InMemoryCache,
-  HttpLink,
-  ApolloProvider,
-} from "@apollo/client";
+import { ApolloProvider } from "@apollo/client";
 import Posts from "@/components/organisms/Posts";
+import Title from "@/components/atom/labels/Title";
+import { client } from "@/data/constants";
 
 function service() {
-  const client = new ApolloClient({
-    cache: new InMemoryCache(),
-    link: new HttpLink({
-      uri: "https://blog-backend-blush.vercel.app/graphql",
-    }),
-  });
-
   return (
     <>
       <ApolloProvider client={client}>
         <Layout>
           <section id="service">
+            <Title>Posts</Title>
             <Posts />
           </section>
         </Layout>
