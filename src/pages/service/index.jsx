@@ -7,6 +7,7 @@ import {
   ApolloProvider,
 } from "@apollo/client";
 import Posts from "@/components/organisms/Posts";
+import Title from "@/components/atom/labels/Title";
 
 function service() {
   const client = new ApolloClient({
@@ -20,6 +21,9 @@ function service() {
     <>
       <ApolloProvider client={client}>
         <Layout>
+          <div className="">
+            <Title>Posts</Title>
+          </div>
           <section id="service">
             <Posts />
           </section>

@@ -1,13 +1,17 @@
 import React from "react";
 
-const PostCard = ({ title, body, categories }) => {
+const PostCard = ({ title, body, categories, author }) => {
   return (
     <div class="card bg-base-100 shadow-xl md:w-50">
       <div class="card-body">
-        <h2 class="card-title text-primary">{title}</h2>
+        <h2 class="card-title text-primary capitalize">{title}</h2>
+        <h4 class="text-primary text-[16px] italic py-2">
+          - {author ? author.name : "autor"}
+        </h4>
         <p className="text-secondary">{body}</p>
-        <div class="card-actions justify-end">
-          <div className="px-2 py-4">
+        <div class="card-actions justify-start">
+          <div className="py-4 text-primary font-bold">
+            <div className="py-2">Categories:</div>
             {categories.map(({ ...category }) => {
               return (
                 <>
