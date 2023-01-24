@@ -10,10 +10,8 @@ function service() {
     <>
       <ApolloProvider client={client}>
         <Layout>
-          <div className="">
-            <Title>Posts</Title>
-          </div>
           <section id="service">
+            <Title>Posts</Title>
             <Posts />
           </section>
         </Layout>
