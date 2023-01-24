@@ -2,7 +2,7 @@ import React from "react";
 
 const PostCard = ({ title, body, categories }) => {
   return (
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card bg-base-100 shadow-xl md:w-50">
       <div class="card-body">
         <h2 class="card-title text-primary">{title}</h2>
         <p className="text-secondary">{body}</p>

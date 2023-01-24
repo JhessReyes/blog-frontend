@@ -36,7 +36,7 @@ const Posts = ({ posts }) => {
             data.posts.rows.map(({ ...post }) => {
               return (
                 <>
-                  <div className="md:w-1/2 xl:w-1/3 px-2 my-2">
+                  <div className="md:w-1/2 xl:w-1/3 px-1 my-2">
                     <PostCard
                       title={post.title}
                       body={post.body}
