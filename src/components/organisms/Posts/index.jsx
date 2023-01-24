@@ -30,7 +30,10 @@ const Posts = ({ posts }) => {
       <div className="">
         <div className="bg-primary flex flex-wrap">
           {loading ? (
-            <p>Loading...</p>
+            <>
+              <p>Loading...</p>
+              <progress class="progress w-full h-2"></progress>
+            </>
           ) : (
             data &&
             data.posts.rows.map(({ ...post }) => {
