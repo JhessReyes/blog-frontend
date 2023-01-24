@@ -52,7 +52,7 @@ function Navbar() {
               className={`${
                 toggle ? "flex" : "hidden"
               } p-6 bg-gradient-to-r from-secondary absolute
-               top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl`}
+               top-20 right-0 left-0 mx-4 my-2 min-w-[140px] rounded-xl`}
             >
               <ul className="list-none justify-end items-center">
                 {menuItems.map(({ ...menu }) => {

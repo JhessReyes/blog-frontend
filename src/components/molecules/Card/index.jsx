@@ -2,7 +2,7 @@ import React from "react";
 
 const PostCard = ({ title, body, categories, author }) => {
   return (
-    <div class="card bg-base-100 shadow-xl md:w-50">
+    <div class="rounded-xl bg-base-100 shadow-xl md:w-50">
       <div class="card-body">
         <h2 class="card-title text-primary capitalize">{title}</h2>
         <h4 class="text-primary text-[16px] italic py-2">
